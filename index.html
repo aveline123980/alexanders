@@ -67,10 +67,17 @@
             if (username === "admin123" && password === "admin123") {
                 alert("Login successful! Redirecting to home page...");
                 window.location.href = "alexanders.html"; // Update with your actual page
-            } else {
-                alert("Invalid username or password. Please try again.");
+           } else {
+                alert("Invalid email or password. Please wait 10 seconds before trying again.");
+                isLocked = true; // Lock login attempts
+
+                setTimeout(() => {
+                    isLocked = false; // Unlock after 10 seconds
+                    alert("You can try logging in again now.");
+                }, 10000);
             }
         }
+        
     </script>
 </head>
 <body>
