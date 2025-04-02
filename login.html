@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Seafood Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #89cff0;
+            padding: 70px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 50px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 17px;
+            border: 3px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            background-color: #000080;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 370px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+         button:hover {
+            background-color: #000000;
+        }
+
+       
+    </style>
+    <script>
+        let isLocked = false; // Flag to prevent multiple attempts
+
+        function login(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            if (isLocked) {
+                alert("Please wait before trying again.");
+                return;
+            }
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Simple login check (Replace with actual authentication)
+            if (email === "aveline@yahoo.com" && password === "aveline123") {
+                alert("Login successful! Redirecting to home page...");
+                window.location.href = 'file:///C:/Users/Obejas.AO/Documents/Obejas/alexanders.html'; // Redirect to home page
+            } else {
+                alert("Invalid email or password. Please wait 10 seconds before trying again.");
+                isLocked = true; // Lock login attempts
+
+                setTimeout(() => {
+                    isLocked = false; // Unlock after 10 seconds
+                    alert("You can try logging in again now.");
+                }, 10000);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to Your Account</h2>
+        <form onsubmit="login(event)">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+       
+    </div>
+</body>
+</html>
+

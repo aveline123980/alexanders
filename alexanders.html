@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexander's Seafood Restaurant</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      /* Set the same background image for the entire page */
+      background: url('https://static.vecteezy.com/system/resources/previews/049/003/948/non_2x/fresh-fish-and-seafood-with-blank-space-photo.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    /* To improve readability, add a semi-transparent overlay on each section */
+    section {
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px;
+      border-radius: 10px;
+    }
+    /* Navigation */
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 51, 102, 0.9);
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    /* Home Section */
+    #home {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      /* Remove individual background so the body image shows through */
+      background: transparent;
+    }
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      color: #000080; /* Changed to navy blue */
+    }
+    #home p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      color: #000080; /* Changed to navy blue */
+    }
+    .btn {
+      display: inline-block;
+      background: #000080; /* Changed to navy blue */
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    /* Section Headings */
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #003366;
+    }
+    /* About Section */
+    #about .content {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    /* Menu Section */
+    #menu ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+    }
+    #menu ul li {
+      background: #000080; /* Changed to navy blue */
+      color: #fff;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 5px;
+      width: 200px;
+      text-align: center;
+    }
+    /* Reservations Section */
+    #reservations form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    #reservations form input,
+    #reservations form button {
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #reservations form button {
+      background: #000080; /* Changed to navy blue */
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    /* Blog Section */
+    #blog .posts {
+      max-width: 900px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #blog .post {
+      background: #f0f0f0;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 5px;
+      width: 300px;
+    }
+    #blog .post h3 {
+      margin-bottom: 10px;
+      color: #003366;
+    }
+    /* Footer */
+    footer {
+      background: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav ul li {
+        margin: 0 8px;
+      }
+      #home h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reservations">Reservations</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Alexander's Seafood Restaurant</h1>
+    <p>Welcome to our world of fresh seafood, exquisite flavors, and exceptional service.</p>
+    <a href="#menu" class="btn">Explore Our Menu</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="content">
+      <p>
+        At Alexander's Seafood Restaurant, we pride ourselves on serving the freshest seafood sourced responsibly. 
+        Our talented chefs bring years of experience to create mouth-watering dishes that celebrate the bounty of the sea.
+      </p>
+      <p>
+        We are committed to sustainability and excellence, ensuring every plate is a masterpiece that tells a story 
+        of passion, innovation, and respect for nature.
+      </p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <ul>
+      <li>Shrimp Pasta - P150.99</li>
+      <li>Seafood Paella- P300.99</li>
+      <li>Sweet and Sour - P250.99</li>
+      <li>Fish Tacos - P215.99</li>
+      <li>Seafood Paella - P400.99</li>
+      <li>Clam Chowder - P450.99</li>
+    </ul>
+  </section>
+
+  <!-- Reservations Section -->
+  <section id="reservations">
+    <h2>Reservations</h2>
+    <form onsubmit="return validateReservation()">
+      <input type="text" id="res-name" placeholder="Full Name" required />
+      <input type="email" id="res-email" placeholder="Email" required />
+      <input type="tel" id="res-phone" placeholder="Phone Number" required />
+      <input type="date" id="res-date" required />
+      <input type="time" id="res-time" required />
+      <input type="number" id="res-guests" placeholder="Number of Guests" min="1" required />
+      <button type="submit">Reserve Now</button>
+    </form>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <h2>Our Blog</h2>
+    <div class="posts">
+      <!-- Sample Post 1 -->
+      <div class="post">
+        <h3>Fresh Catch of the Day</h3>
+        <p>
+          Discover our tips for selecting the freshest seafood and learn more about our sustainable sourcing practices.
+        </p>
+      </div>
+      <!-- Sample Post 2 -->
+      <div class="post">
+        <h3>Chef’s Special Recipe</h3>
+        <p>
+          Dive into our chef's exclusive recipe for a delicious seafood paella that will transport your taste buds to the coast.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Programmed and Developed by Aveline Obejas.</p>
+  </footer>
+
+  <!-- JavaScript for Form Validation -->
+  <script>
+    function validateReservation() {
+      // Retrieve values from the reservation form
+      const name = document.getElementById('res-name').value;
+      const email = document.getElementById('res-email').value;
+      const phone = document.getElementById('res-phone').value;
+      const date = document.getElementById('res-date').value;
+      const time = document.getElementById('res-time').value;
+      const guests = document.getElementById('res-guests').value;
+      
+      // Basic validation check
+      if (!name || !email || !phone || !date || !time || !guests) {
+        alert("Please fill out all reservation fields.");
+        return false;
+      }
+      alert("Reservation Successful!");
+      return true;
+    }
+  </script>
+</body>
+</html>
