@@ -68,15 +68,15 @@
                 return;
             }
 
-            var email = document.getElementById("email").value;
+            var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
 
             // Simple login check (Replace with actual authentication)
-            if (email === "admin123" && password === "admin123") {
+            if (username === "admin123" && password === "admin123") {
                 alert("Login successful! Redirecting to home page...");
                 window.location.href = 'file:///C:/Users/Obejas.AO/Documents/Obejas/alexanders.html'; // Redirect to home page
             } else {
-                alert("Invalid email or password. Please wait 10 seconds before trying again.");
+                alert("Invalid (username or password. Please wait 10 seconds before trying again.");
                 isLocked = true; // Lock login attempts
 
                 setTimeout(() => {
@@ -91,8 +91,8 @@
     <div class="login-container">
         <h2>Login to Your Account</h2>
         <form onsubmit="login(event)">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="username">Username:</label>
+            <input type="username" id="username" name="username" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
