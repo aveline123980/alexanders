@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Seafood Restaurant</title>
+    <title> Alexander's Seafood Restaurant</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -47,35 +46,27 @@
             color: white;
             padding: 10px;
             border: none;
-            width: 370px;
+            width: 100%;
             border-radius: 4px;
             cursor: pointer;
         }
-         button:hover {
+
+        button:hover {
             background-color: #000000;
         }
-
-       
     </style>
     <script>
-        let isLocked = false; // Flag to prevent multiple attempts
-
         function login(event) {
             event.preventDefault(); // Prevent form submission
-            
-            if (isLocked) {
-                alert("Please wait before trying again.");
-                return;
-            }
 
-            var email = document.getElementById("email").value;
+            var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
 
-            // Simple login check (Replace with actual authentication)
-            if (email === "aveline@yahoo.com" && password === "aveline123") {
+            // Simple login check (Still not secure, should use PHP & database)
+            if (username === "admin123" && password === "admin123") {
                 alert("Login successful! Redirecting to home page...");
-                window.location.href = 'file:///C:/Users/USER/Documents/Obejas,%20Aveline%20O/LD2_OBEJAS_AVELINE.HTML'; // Redirect to home page
-            } else {
+                window.location.href = "alexanders.html"; // Update with your actual page
+           } else {
                 alert("Invalid email or password. Please wait 10 seconds before trying again.");
                 isLocked = true; // Lock login attempts
 
@@ -85,21 +76,21 @@
                 }, 10000);
             }
         }
+        
     </script>
 </head>
 <body>
     <div class="login-container">
         <h2>Login to Your Account</h2>
         <form onsubmit="login(event)">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
             <button type="submit">Login</button>
         </form>
-       
     </div>
 </body>
 </html>
