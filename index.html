@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Alexander's Seafood Restaurant</title>
+    <title>Alexander's Seafood Restaurant</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,27 +57,33 @@
         }
     </style>
     <script>
+        let isLocked = false;
+
         function login(event) {
             event.preventDefault(); // Prevent form submission
+
+            if (isLocked) {
+                alert("Please wait before trying again.");
+                return;
+            }
 
             var username = document.getElementById("username").value;
             var password = document.getElementById("password").value;
 
-            // Simple login check (Still not secure, should use PHP & database)
+            // Simple login check (for demo purposes only)
             if (username === "admin123" && password === "admin123") {
                 alert("Login successful! Redirecting to home page...");
-                window.location.href = "alexanders.html"; // Update with your actual page
-           } else {
-                alert("Invalid email or password. Please wait 10 seconds before trying again.");
-                isLocked = true; // Lock login attempts
+                window.location.href = "alexanders.html"; // Update this to your actual page
+            } else {
+                alert("Invalid username or password. Please wait 10 seconds before trying again.");
+                isLocked = true;
 
                 setTimeout(() => {
-                    isLocked = false; // Unlock after 10 seconds
+                    isLocked = false;
                     alert("You can try logging in again now.");
                 }, 10000);
             }
         }
-        
     </script>
 </head>
 <body>
